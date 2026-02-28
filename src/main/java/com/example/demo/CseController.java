@@ -7,8 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CseController {
     
-    @GetMapping("/cseadd")  // Note: endpoint is /cseadd, not /home
-    public int addCSE(@RequestParam int a, @RequestParam int b) {
-        return a + b;
+    @GetMapping("/cseadd")
+    public String addCSE(@RequestParam int a, @RequestParam int b) {
+        int result = a + b;
+        return "result added by 23mh1a05i7: " + result;
     }
 }
